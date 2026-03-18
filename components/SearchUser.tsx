@@ -4,7 +4,7 @@ type Props = {
 }
 
 export function SearchUser({onSearch, loading}: Props) {
-
+ 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
