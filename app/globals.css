@@ -5,6 +5,8 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #1a1a1a;
+  background: #f5f5f5;
 }
 
 a:focus,
@@ -12,4 +14,285 @@ button:focus,
 input:focus {
   outline: 2px solid #000;
   outline-offset: 2px;
+}
+
+body > a[href="#main"] {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 100;
+}
+body > a[href="#main"]:focus {
+  left: 8px;
+}
+
+main#main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 24px;
+}
+
+h2 {
+  margin: 0 0 4px;
+  font-size: 1.15rem;
+}
+
+form[aria-label] label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.search-row {
+  display: flex;
+  gap: 8px;
+}
+
+.search-row input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.search-row button {
+  padding: 8px 20px;
+  font-size: 1rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-row button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.error-msg {
+  color: #b00;
+  margin: 16px 0 0;
+  font-size: 0.9rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.results {
+  margin-top: 32px;
+}
+
+.user-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.avatar {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-info .login {
+  color: #555;
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.user-info .bio {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.user-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0 0 12px;
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 0.875rem;
+}
+
+.sort-btn {
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.sort-btn.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+.repo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.repo-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.repo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.repo-name {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #0969da;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.lang-tag {
+  font-size: 0.75rem;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #555;
+}
+
+.repo-desc {
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.gh-link {
+  font-size: 0.8rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.gh-link:hover {
+  text-decoration: underline;
+}
+
+.status-msg {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin: 16px 0;
+}
+
+.load-more-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 28px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.load-more-btn:hover {
+  background: #f5f5f5;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.repo-detail-header {
+  margin-bottom: 28px;
+}
+
+.repo-detail-header h1 {
+  margin-bottom: 8px;
+}
+
+.repo-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.stat-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 600;
 }
